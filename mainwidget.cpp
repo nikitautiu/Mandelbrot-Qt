@@ -1,17 +1,13 @@
 #include "mainwidget.h"
 #include "optionswidget.h"
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 #include <QImage>
 #include <QPixmap>
 #include <QPushButton>
 #include <QMouseEvent>
-#include <QKeyEvent>
-#include <QDebug>
 #include <QProgressBar>
 #include <QMessageBox>
-#include <QLayoutItem>
-#include <Qlabel>
+#include <QLabel>
 #include <math.h>
 
 void MainWidget::ZoomIn(const QPoint &p)  {
@@ -99,7 +95,7 @@ void MainWidget::keyPressEvent(QKeyEvent *ev)
 
 bool MainWidget::eventFilter(QObject *obj, QEvent *event)
 {
-    //imgLabel -> setFocus(); //TODO: fix crash here
+    imgLabel -> setFocus(); //TODO: fix crash here
 
     if(obj == this -> imgLabel)
     {
